@@ -16,7 +16,7 @@ class Infos : AppCompatActivity() {
         val nutritionFacts = NutritionFacts(NutritionFactsItem("kj",293,"?"),NutritionFactsItem("g", 0.8,"?"), NutritionFactsItem("g", 0.1, "?"), NutritionFactsItem("g", 8.4, "?"), NutritionFactsItem("g",5.2,"?"), NutritionFactsItem("g", 5.2, "?"),
             NutritionFactsItem("g",4.2,"?"), NutritionFactsItem("g",0.75,"?"), NutritionFactsItem("g",0.295,"?"))
 
-        val product = Product(getString(R.string.title),getString(R.string.marque),getString(R.string.barcode,"3958Z482384"),ContextCompat.getDrawable(this,R.drawable.nutriscore_e)!!,"",getString(R.string.quantity),getString(R.string.vendu),getString(R.string.ingredients),getString(R.string.allergenes), getString(R.string.additifs), nutritionFacts)
+        val product = Product(getString(R.string.title),getString(R.string.marque),getString(R.string.barcode,"3958Z482384"),ContextCompat.getDrawable(this,R.drawable.nutriscore_e)!!,"A","", getString(R.string.quantity),getString(R.string.vendu),getString(R.string.ingredients),getString(R.string.allergenes), getString(R.string.additifs), getDrawable(R.drawable.placeholder)!!, nutritionFacts)
 
         value_energie_100g.text = String.format(product.nutritionFacts.energie.quantite_pour_100g.toString() + " " +  product.nutritionFacts.energie.unite)
         value_matieres_grasses_100g.text = String.format(product.nutritionFacts.matieres_grasses.quantite_pour_100g.toString()+" "+product.nutritionFacts.matieres_grasses.unite)
@@ -37,8 +37,6 @@ class Infos : AppCompatActivity() {
         value_proteines_part.text = String.format(product.nutritionFacts.proteines.quantite_par_portion)
         value_sel_part.text = String.format(product.nutritionFacts.sel.quantite_par_portion)
         value_sodium_part.text = String.format(product.nutritionFacts.sodium.quantite_par_portion)
-
-
     }
 
 

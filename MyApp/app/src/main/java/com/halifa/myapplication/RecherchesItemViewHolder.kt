@@ -19,18 +19,13 @@ class RecherchesItemViewHolder(v: View) : RecyclerView.ViewHolder(v) {
     val photo = v.findViewById<ImageView>(R.id.photo)
     val nutri_score = v.findViewById<TextView>(R.id.nutriscore)
     val calories = v.findViewById<TextView>(R.id.calories)
-    val nutriscore_logo = v.findViewById<View>(R.id.nutriscore_logo)
-    val calories_logo = v.findViewById<View>(R.id.calories_logo)
-    val bookmark = v.findViewById<View>(R.id.bookmark)
 
-
-    @SuppressLint("ResourceAsColor")
-    fun bindProduct(product:RecherchesItem) {
+    fun bindProduct(product:Product) {
        photo.setImageDrawable(product.photo)
         nom.text = product.nom
         marque.text = product.marque
-        nutri_score.text = product.nutriscore
-        calories.text = product.calories
+        nutri_score.text = String.format("Nutriscore : "+product.nutriscore_value)
+        calories.text = String.format(product.nutritionFacts.energie.quantite_pour_100g.toString() + " kCal/part")
 
     }
 

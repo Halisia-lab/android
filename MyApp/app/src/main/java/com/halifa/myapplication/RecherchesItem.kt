@@ -7,8 +7,7 @@ class RecherchesItem (
     val marque: String,
     val photo:Drawable,
     val nutriscore:String,
-    val calories:String,
-    val saved: Boolean
+    val calories:String
         ){
 
 }

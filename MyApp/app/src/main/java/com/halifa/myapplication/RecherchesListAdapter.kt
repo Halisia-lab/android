@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class RecherchesListAdapter(val products: List<RecherchesItem>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class RecherchesListAdapter(val products: List<Product>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         // c/c

@@ -7,14 +7,14 @@ import android.text.SpannableStringBuilder
 import android.text.style.StyleSpan
 import android.widget.TextView
 import androidx.core.content.ContextCompat
-import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.home.*
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.home)
 
         supportActionBar?.setBackgroundDrawable(ContextCompat.getDrawable(this, R.drawable.background_toolbar))
@@ -29,9 +29,16 @@ class MainActivity : AppCompatActivity() {
         val nutritionFacts = NutritionFacts(NutritionFactsItem("kj",293,"?"),NutritionFactsItem("g", 0.8,"?"), NutritionFactsItem("g", 0.1, "?"), NutritionFactsItem("g", 8.4, "?"), NutritionFactsItem("g",5.2,"?"), NutritionFactsItem("g", 5.2, "?"),
             NutritionFactsItem("g",4.2,"?"), NutritionFactsItem("g",0.75,"?"), NutritionFactsItem("g",0.295,"?"))
 
-        val product = Product(getString(R.string.title),getString(R.string.marque),getString(R.string.barcode,"3958Z482384"),ContextCompat.getDrawable(this,R.drawable.nutriscore_e)!!,"",getString(R.string.quantity),getString(R.string.vendu),getString(R.string.ingredients),getString(R.string.allergenes), getString(R.string.additifs), nutritionFacts)
+        val product = Product(getString(R.string.title),getString(R.string.marque),getString(R.string.barcode,"3958Z482384"),ContextCompat.getDrawable(this,R.drawable.nutriscore_e)!!,"A","",getString(R.string.quantity),getString(R.string.vendu),getString(R.string.ingredients),getString(R.string.allergenes), getString(R.string.additifs), getDrawable(R.drawable.placeholder)!!, nutritionFacts)
+
+        bindProduct(product)
+
+        //Picasso.get().load(product.url).into(placeholder)
 
 
+
+    }
+    fun bindProduct(product: Product) {
         nom.text = product.nom
         marque.text = product.marque
         barcode.text = product.codebarres
@@ -41,32 +48,29 @@ class MainActivity : AppCompatActivity() {
         additifs.text = product.additifs
         vendu.text = product.pays
         nutriscore.setImageDrawable(product.nutriscore)
-        //Picasso.get().load(product.url).into(placeholder)
-
-
-
     }
-        /*findViewById<View>(R.id.view1).setOnClickListener {
-            findViewById<View>(R.id.view2).setBackgroundColor(Color.RED);
-        }*/
-
-
 
     fun TextView.setBoldText(text: String, separator: String = ":") {
         val spannable = SpannableStringBuilder(text)
         spannable.setSpan(StyleSpan(Typeface.BOLD),0,text.indexOf(separator) +1,0)
         this.text= spannable
     }
-    /*override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        val days = listOf("Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche")
+    /* Notes */
+    /*
+        override fun onCreate(savedInstanceState: Bundle?) {
+            super.onCreate(savedInstanceState)
+            setContentView(R.layout.activity_main)
 
-        //recyclerview.layoutManager = GridLayoutManager(this, 2)
-        recyclerview.layoutManager = LinearLayoutManager(this)
-        recyclerview.adapter = ListAdapter(days)
-    }
+            val days = listOf("Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche")
 
+            //recyclerview.layoutManager = GridLayoutManager(this, 2)
+            recyclerview.layoutManager = LinearLayoutManager(this)
+            recyclerview.adapter = ListAdapter(days)
+        }
+
+        findViewById<View>(R.id.view1).setOnClickListener {
+            findViewById<View>(R.id.view2).setBackgroundColor(Color.RED);
+        }
     */
 }

@@ -425,6 +425,4 @@
         app:layout_constraintStart_toEndOf="@id/guideline_start_part"/>
     <!-- End Values -->
 
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

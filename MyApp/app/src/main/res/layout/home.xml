@@ -4,13 +4,142 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <!-- Guidelines -->
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="20dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="20dp" />
+            <!-- End Guidelines -->
+
+            <ImageView
+                android:id="@+id/placeholder"
+                android:layout_width="match_parent"
+                android:layout_height="290dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/placeholder" />
+
+
+            <TextView
+                android:id="@+id/nom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+
+                app:layout_constraintStart_toEndOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/placeholder" />
+
+
+            <TextView
+                android:id="@+id/marque"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toEndOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/nom" />
+
+            <ImageView
+                android:id="@+id/nutriscore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintBottom_toBottomOf="@id/marque"
+                app:layout_constraintHorizontal_bias="0.8"/>
+
+
+            <TextView
+                android:id="@+id/barcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/marque" />
+
+            <TextView
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/barcode" />
+
+            <TextView
+                android:id="@+id/ingredients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/vendu" />
+
+            <TextView
+                android:id="@+id/vendu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/quantity" />
+
+            <TextView
+                android:id="@+id/allergenes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/ingredients" />
+
+            <TextView
+                android:id="@+id/additifs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/allergenes" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+
+
+<!-- Notes -->
     <!--
-    <View
-        android:background="@android:color/black"
-        android:id="@+id/view1"
-        android:layout_width="10dp"
-        android:layout_height="10dp"/>
-        -->
+        <View
+            android:background="@android:color/black"
+            android:id="@+id/view1"
+            android:layout_width="10dp"
+            android:layout_height="10dp"/>
+            -->
 
     <!--  Regrouper deux vues
     <androidx.constraintlayout.widget.Barrier
@@ -20,131 +149,4 @@
         android:layout_height="wrap_content"/>
         -->
 
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context=".MainActivity">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                >
-
-
-                <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/guideline_start"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    app:layout_constraintGuide_begin="20dp" />
-
-                <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/guideline_end"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    app:layout_constraintGuide_end="20dp" />
-
-
-                <ImageView
-                    android:id="@+id/placeholder"
-                    android:layout_width="match_parent"
-                    android:layout_height="290dp"
-                    android:scaleType="centerCrop"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/placeholder" />
-
-
-                <TextView
-                    android:id="@+id/nom"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-
-                    app:layout_constraintStart_toEndOf="@+id/guideline_start"
-                    app:layout_constraintTop_toBottomOf="@+id/placeholder" />
-
-
-                <TextView
-                    android:id="@+id/marque"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="15sp"
-                    android:textStyle="italic"
-                    app:layout_constraintStart_toEndOf="@+id/guideline_start"
-                    app:layout_constraintTop_toBottomOf="@+id/nom" />
-
-                <ImageView
-                    android:id="@+id/nutriscore"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintEnd_toEndOf="@id/guideline_end"
-                    app:layout_constraintBottom_toBottomOf="@id/marque"
-                    app:layout_constraintHorizontal_bias="0.8"/>
-
-
-                <TextView
-                    android:id="@+id/barcode"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:textSize="15sp"
-                    app:layout_constraintStart_toEndOf="@+id/guideline_start"
-                    app:layout_constraintTop_toBottomOf="@+id/marque" />
-
-                <TextView
-                    android:id="@+id/quantity"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="15sp"
-                    app:layout_constraintStart_toEndOf="@+id/guideline_start"
-                    app:layout_constraintTop_toBottomOf="@+id/barcode" />
-
-                <TextView
-                    android:id="@+id/ingredients"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:textSize="15sp"
-                    app:layout_constraintStart_toEndOf="@+id/guideline_start"
-                    app:layout_constraintTop_toBottomOf="@+id/vendu" />
-
-                <TextView
-                    android:id="@+id/vendu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="15sp"
-                    app:layout_constraintStart_toEndOf="@+id/guideline_start"
-                    app:layout_constraintTop_toBottomOf="@+id/quantity" />
-
-                <TextView
-                    android:id="@+id/allergenes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:textSize="15sp"
-                    app:layout_constraintStart_toEndOf="@+id/guideline_start"
-                    app:layout_constraintTop_toBottomOf="@+id/ingredients" />
-
-                <TextView
-                    android:id="@+id/additifs"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:textSize="15sp"
-                    app:layout_constraintStart_toEndOf="@+id/guideline_start"
-                    app:layout_constraintTop_toBottomOf="@+id/allergenes" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-</layout>
+<!-- End Notes -->

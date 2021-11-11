@@ -28,8 +28,8 @@
     <string name="label_sodium">Sodium</string>
 
 
-    <string name="nutriscore">Nutriscore : A</string>
-    <string name="energie">234 kCal/part</string>
+    <string name="nutriscore">A</string>
+    <string name="energie">234</string>
 
 
 </resources>
