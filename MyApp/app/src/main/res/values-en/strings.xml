@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OpenFoodFacts</string>
+    <string name="title">Petits pois et carottes</string>
+    <string name="marque">Cassegrain</string>
+    <string name="barcode">Code barres: %1$s</string>
+    <string name="quantity">Quantité: 400 g (280g net égoutté)</string>
+    <string name="allergenes">Substances allergènes: Aucune</string>
+    <string name="additifs">Additifs: Aucun</string>
+    <string name="ingredients">Ingrédients: Petits pois 66%, eau, garniture 2,8% (salade, oignon, grelot), sucre, sel, arôme naturel</string>
+    <string name="vendu">Vendu en : France, Japon, Suisse</string>
+
+    <string name="reperes">Repères nutritionnels pour 100g</string>
+    <string name="matieres_grasses">0,8g de Matières grasses / Lipides en faible quantité</string>
+    <string name="acides_gras">0,1g d\'acides gras saturés en faible quantité</string>
+    <string name="sucres">5,2g de sucres en quantité modérée</string>
+    <string name="sel">0,75g de Sel\n en quantité modérée</string>
+
+    <string name="label_100g">Pour 100g</string>
+    <string name="label_part">Par part</string>
+    <string name="label_energie">Energie</string>
+    <string name="label_matieres_grasses">Matières grasses</string>
+    <string name="label_acides_gras">dont Acides gras saturés</string>
+    <string name="label_glucides">Glucides</string>
+    <string name="label_sucres">dont Sucres</string>
+    <string name="label_fibres">Fibres alimentaires</string>
+    <string name="label_proteines">Protéines</string>
+    <string name="label_sel">Sel</string>
+    <string name="label_sodium">Sodium</string>
+
+    <string name="nutriscore">Nutriscore : A</string>
+    <string name="energie">234 kCal/part</string>
+</resources>

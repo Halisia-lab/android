@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <!-- Guidelines -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start_labels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="2dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start_100g"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="200dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start_part"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="300dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top_labels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top_energie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="60dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top_matieres_grasses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/label_energie"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top_acides"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/label_matieres_grasses"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top_glucides"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/label_acides"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top_sucres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/label_glucides"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top_fibres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/label_sucres"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top_proteines"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/label_fibres"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top_sel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/label_proteines"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top_sodium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/label_sel"/>
+    <!-- End Guidelines-->
+
+    <!-- Labels -->
+    <cours.TableCellView
+        android:id="@+id/labels_100g"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="20dp"
+        app:border="left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_labels"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_100g"
+        android:text="@string/label_100g"
+        android:textStyle="bold"/>
+
+    <cours.TableCellView
+        android:id="@+id/labels_part"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:border="left"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_labels"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_part"
+        android:text="@string/label_part"
+        android:textStyle="bold"/>
+
+    <cours.TableCellView
+        android:id="@+id/label_energie"
+        app:border="top"
+        android:paddingStart="5dp"
+        android:paddingEnd="150dp"
+        android:paddingVertical="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_energie"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_labels"
+
+        android:text="@string/label_energie"
+        android:textStyle="bold"/>
+
+    <cours.TableCellView
+        android:id="@+id/label_matieres_grasses"
+        app:border="top"
+        android:paddingStart="5dp"
+        android:paddingEnd="90dp"
+        android:paddingVertical="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_matieres_grasses"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_labels"
+        android:text="@string/label_matieres_grasses"
+        android:textStyle="bold"/>
+
+    <cours.TableCellView
+        android:id="@+id/label_acides"
+        app:border="top"
+        android:paddingStart="5dp"
+        android:paddingEnd="50dp"
+        android:paddingVertical="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_acides"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_labels"
+        android:text="@string/label_acides_gras"
+        android:textStyle="bold"/>
+
+    <cours.TableCellView
+        android:id="@+id/label_glucides"
+        app:border="top"
+        android:paddingStart="5dp"
+        android:paddingEnd="140dp"
+        android:paddingVertical="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_glucides"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_labels"
+        android:text="@string/label_glucides"
+        android:textStyle="bold"/>
+
+    <cours.TableCellView
+        android:id="@+id/label_sucres"
+        app:border="top"
+        android:paddingStart="5dp"
+        android:paddingEnd="130dp"
+        android:paddingVertical="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_sucres"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_labels"
+        android:text="@string/label_sucres"
+        android:textStyle="bold"/>
+
+    <cours.TableCellView
+        android:id="@+id/label_fibres"
+        app:border="top"
+        android:paddingStart="5dp"
+        android:paddingEnd="75dp"
+        android:paddingVertical="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_fibres"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_labels"
+        android:text="@string/label_fibres"
+        android:textStyle="bold"/>
+
+    <cours.TableCellView
+        android:id="@+id/label_proteines"
+        app:border="top"
+        android:paddingStart="5dp"
+        android:paddingEnd="140dp"
+        android:paddingVertical="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_proteines"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_labels"
+        android:text="@string/label_proteines"
+        android:textStyle="bold"/>
+
+    <cours.TableCellView
+        android:id="@+id/label_sel"
+        app:border="top"
+        android:paddingStart="5dp"
+        android:paddingEnd="180dp"
+        android:paddingVertical="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_sel"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_labels"
+        android:text="@string/label_sel"
+        android:textStyle="bold"/>
+
+    <cours.TableCellView
+        android:id="@+id/label_sodium"
+        app:border="top"
+        android:paddingStart="5dp"
+        android:paddingEnd="150dp"
+        android:paddingVertical="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_sodium"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_labels"
+        android:text="@string/label_sodium"
+        android:textStyle="bold"/>
+    <!-- End Labels -->
+
+    <!-- Values -->
+    <cours.TableCellView
+        android:id="@+id/value_energie_100g"
+        android:paddingHorizontal="31dp"
+        android:paddingVertical="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:border="top|left"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_energie"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_100g"/>
+
+    <cours.TableCellView
+        android:id="@+id/value_matieres_grasses_100g"
+        android:paddingHorizontal="35dp"
+        android:paddingVertical="7dp"
+        app:border="top|left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_matieres_grasses"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_100g"/>
+
+    <cours.TableCellView
+        android:id="@+id/value_acides_100g"
+        android:paddingHorizontal="35dp"
+        android:paddingVertical="7dp"
+        app:border="top|left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_acides"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_100g"/>
+
+    <cours.TableCellView
+        android:id="@+id/value_glucides_100g"
+        android:paddingHorizontal="35dp"
+        android:paddingVertical="7dp"
+        app:border="top|left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_glucides"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_100g"/>
+
+    <cours.TableCellView
+        android:id="@+id/value_sucres_100g"
+        android:paddingHorizontal="35dp"
+        android:paddingVertical="7dp"
+        app:border="top|left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_sucres"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_100g"/>
+
+    <cours.TableCellView
+        android:id="@+id/value_fibres_100g"
+        android:paddingHorizontal="35dp"
+        android:paddingVertical="7dp"
+        app:border="top|left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_fibres"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_100g"/>
+
+    <cours.TableCellView
+        android:id="@+id/value_proteines_100g"
+        android:paddingHorizontal="35dp"
+        android:paddingVertical="7dp"
+        app:border="top|left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_proteines"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_100g"/>
+
+    <cours.TableCellView
+        android:id="@+id/value_sel_100g"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="7dp"
+        app:border="top|left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_sel"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_100g"/>
+
+    <cours.TableCellView
+        android:id="@+id/value_sodium_100g"
+        android:paddingHorizontal="26dp"
+        android:paddingVertical="7dp"
+        app:border="top|left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_sodium"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_100g"/>
+
+    <cours.TableCellView
+        android:id="@+id/value_energie_part"
+        android:paddingHorizontal="50dp"
+        android:paddingVertical="7dp"
+        app:border="top|left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_energie"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_part"/>
+
+    <cours.TableCellView
+        android:id="@+id/value_matieres_grasses_part"
+        android:paddingHorizontal="50dp"
+        android:paddingVertical="7dp"
+        app:border="top|left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_matieres_grasses"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_part"/>
+
+    <cours.TableCellView
+        android:id="@+id/value_acides_part"
+        android:paddingHorizontal="50dp"
+        android:paddingVertical="7dp"
+        app:border="top|left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_acides"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_part"/>
+
+    <cours.TableCellView
+        android:id="@+id/value_glucides_part"
+        android:paddingHorizontal="50dp"
+        android:paddingVertical="7dp"
+        app:border="top|left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_glucides"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_part"/>
+
+    <cours.TableCellView
+        android:id="@+id/value_sucres_part"
+        android:paddingHorizontal="50dp"
+        android:paddingVertical="7dp"
+        app:border="top|left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_sucres"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_part"/>
+
+    <cours.TableCellView
+        android:id="@+id/value_fibres_part"
+        android:paddingHorizontal="50dp"
+        android:paddingVertical="7dp"
+        app:border="top|left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_fibres"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_part"/>
+
+    <cours.TableCellView
+        android:id="@+id/value_proteines_part"
+        android:paddingHorizontal="50dp"
+        android:paddingVertical="7dp"
+        app:border="top|left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_proteines"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_part"/>
+
+    <cours.TableCellView
+        android:id="@+id/value_sel_part"
+        android:paddingHorizontal="50dp"
+        android:paddingVertical="7dp"
+        app:border="top|left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_sel"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_part"/>
+
+    <cours.TableCellView
+        android:id="@+id/value_sodium_part"
+        android:paddingHorizontal="50dp"
+        android:paddingVertical="7dp"
+        app:border="top|left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top_sodium"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_part"/>
+    <!-- End Values -->
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
