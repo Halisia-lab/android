@@ -1,23 +1,33 @@
 package com.halifa.myapplication
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.infos.*
 
-class Infos : AppCompatActivity() {
+class FragmentInfos :  Fragment() {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(
+            R.layout.infos,
+            container,
+            false
+        )
+    }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.infos)
-
-        supportActionBar?.setBackgroundDrawable(ContextCompat.getDrawable(this, R.drawable.background_toolbar))
-
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         val nutritionFacts = NutritionFacts(NutritionFactsItem("kj",293,"?"),NutritionFactsItem("g", 0.8,"?"), NutritionFactsItem("g", 0.1, "?"), NutritionFactsItem("g", 8.4, "?"), NutritionFactsItem("g",5.2,"?"), NutritionFactsItem("g", 5.2, "?"),
             NutritionFactsItem("g",4.2,"?"), NutritionFactsItem("g",0.75,"?"), NutritionFactsItem("g",0.295,"?"))
 
         val product = Product("Petits pois et carottes","Cassegrain","3958Z482384",
-            ContextCompat.getDrawable(this,R.drawable.nutriscore_e)!!,"A","","400 g (280g net égoutté)","France, Japon, Suisse","Petits pois 66%, eau, garniture 2,8% (salade, oignon, grelot), sucre, sel, arôme naturel","Aucune", "Aucun", ContextCompat.getDrawable(this, R.drawable.placeholder)!!, nutritionFacts)
+            ContextCompat.getDrawable(requireActivity().applicationContext,R.drawable.nutriscore_e)!!,"A","","400 g (280g net égoutté)","France, Japon, Suisse","Petits pois 66%, eau, garniture 2,8% (salade, oignon, grelot), sucre, sel, arôme naturel","Aucune", "Aucun", ContextCompat.getDrawable(requireActivity().applicationContext, R.drawable.placeholder)!!, nutritionFacts)
 
         value_energie_100g.text = String.format(product.nutritionFacts.energie.quantite_pour_100g.toString() + " " +  product.nutritionFacts.energie.unite)
         value_matieres_grasses_100g.text = String.format(product.nutritionFacts.matieres_grasses.quantite_pour_100g.toString()+" "+product.nutritionFacts.matieres_grasses.unite)
@@ -38,7 +48,7 @@ class Infos : AppCompatActivity() {
         value_proteines_part.text = String.format(product.nutritionFacts.proteines.quantite_par_portion)
         value_sel_part.text = String.format(product.nutritionFacts.sel.quantite_par_portion)
         value_sodium_part.text = String.format(product.nutritionFacts.sodium.quantite_par_portion)
-    }
 
+    }
 
 }

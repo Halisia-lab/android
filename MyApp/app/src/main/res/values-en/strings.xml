@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">OpenFoodFacts</string>
-    <string name="title">Petits pois et carottes</string>
-    <string name="marque">Cassegrain</string>
-    <string name="barcode">Code barres: %1$s</string>
-    <string name="quantity">Quantité: 400 g (280g net égoutté)</string>
-    <string name="allergenes">Substances allergènes: Aucune</string>
-    <string name="additifs">Additifs: Aucun</string>
-    <string name="ingredients">Ingrédients: Petits pois 66%, eau, garniture 2,8% (salade, oignon, grelot), sucre, sel, arôme naturel</string>
-    <string name="vendu">Vendu en : France, Japon, Suisse</string>
+    <string name="app_name">My App</string>
+    <string name="barcode">Code barres: </string>
+    <string name="quantity">Quantité: </string>
+    <string name="allergenes">Substances allergènes: </string>
+    <string name="additifs">Additifs: </string>
+    <string name="ingredients">Ingrédients: </string>
+    <string name="vendu">Vendu en: </string>
 
     <string name="reperes">Repères nutritionnels pour 100g</string>
     <string name="matieres_grasses">0,8g de Matières grasses / Lipides en faible quantité</string>
