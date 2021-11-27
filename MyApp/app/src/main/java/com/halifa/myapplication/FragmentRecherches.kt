@@ -38,10 +38,15 @@ class FragmentRecherches: Fragment() {
 
         val p = Product("Petits pois et carottes","Cassegrain","3958Z482384",
             ContextCompat.getDrawable(requireActivity().applicationContext,R.drawable.nutriscore_e)!!,"A","","400 g (280g net égoutté)","France, Japon, Suisse","Petits pois 66%, eau, garniture 2,8% (salade, oignon, grelot), sucre, sel, arôme naturel","Aucune", "Aucun", ContextCompat.getDrawable(requireActivity().applicationContext, R.drawable.placeholder)!!, nutritionFacts)
-        val products = listOf(p,p,p)
+        val p2 = Product("1","Cassegrain","3958Z482384",
+            ContextCompat.getDrawable(requireActivity().applicationContext,R.drawable.nutriscore_e)!!,"A","","400 g (280g net égoutté)","France, Japon, Suisse","Petits pois 66%, eau, garniture 2,8% (salade, oignon, grelot), sucre, sel, arôme naturel","Aucune", "Aucun", ContextCompat.getDrawable(requireActivity().applicationContext, R.drawable.placeholder)!!, nutritionFacts)
+        val p3 = Product("2","Cassegrain","3958Z482384",
+            ContextCompat.getDrawable(requireActivity().applicationContext,R.drawable.nutriscore_e)!!,"A","","400 g (280g net égoutté)","France, Japon, Suisse","Petits pois 66%, eau, garniture 2,8% (salade, oignon, grelot), sucre, sel, arôme naturel","Aucune", "Aucun", ContextCompat.getDrawable(requireActivity().applicationContext, R.drawable.placeholder)!!, nutritionFacts)
+        val products = listOf(p,p2,p3)
+
         //recyclerview.layoutManager = GridLayoutManager(this, 2)
         recyclerview.layoutManager = LinearLayoutManager(requireActivity().applicationContext)
-        recyclerview.adapter = RecherchesListAdapter(products)
+        recyclerview.adapter = RecherchesListAdapter(products, requireActivity())
 
     }
 }

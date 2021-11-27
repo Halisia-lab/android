@@ -1,22 +1,26 @@
 package com.halifa.myapplication
 
 import android.graphics.drawable.Drawable
+import android.os.Parcelable
 import androidx.core.graphics.drawable.DrawableCompat
+import kotlinx.android.parcel.Parcelize
+import kotlinx.android.parcel.RawValue
 
+@Parcelize
 data class Product (
-    val nom:String,
-    val marque:String,
-    val codebarres:String,
-    val nutriscore:Drawable,
-    val nutriscore_value:String,
-    val url:String,
-    val quantite:String,
-    val pays:String,
-    val ingredients:String,
-    val allergenes:String,
-    val additifs:String,
-    val photo:Drawable,
-    val nutritionFacts: NutritionFacts
-        ) {
+    val nom: @RawValue String,
+    val marque: @RawValue String,
+    val codebarres: @RawValue String,
+    val nutriscore: @RawValue Drawable,
+    val nutriscore_value: @RawValue String,
+    val url: @RawValue String,
+    val quantite: @RawValue String,
+    val pays: @RawValue String,
+    val ingredients: @RawValue String,
+    val allergenes: @RawValue String,
+    val additifs: @RawValue String,
+    val photo: @RawValue Drawable,
+    val nutritionFacts:  @RawValue NutritionFacts
+):Parcelable {
 
 }

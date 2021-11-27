@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/app_nav"
-    app:startDestination="@id/fragmentHome">
+    android:id="@+id/app_nav_details"
+    app:startDestination="@id/fragmentRecherches">
+
     <fragment
-        android:id="@+id/fragmentHome"
-        android:name="com.halifa.myapplication.FragmentHome"
-        android:label="FragmentHome" />
+        android:id="@+id/fragmentRecherches"
+        android:name="com.halifa.myapplication.FragmentRecherches"
+        android:label="FragmentRecherches" />
     <fragment
-        android:id="@+id/fragmentNutrition"
-        android:name="com.halifa.myapplication.FragmentNutrition"
-        android:label="FragmentNutrition" />
-    <fragment
-        android:id="@+id/fragmentInfos"
-        android:name="com.halifa.myapplication.FragmentInfos"
-        android:label="FragmentInfos" />
+        android:id="@+id/detailsFragment"
+        android:name="com.halifa.myapplication.DetailsFragment"
+        android:label="DetailsFragment" >
+        <argument
+            android:name="product"
+            app:argType="com.halifa.myapplication.Product" />
+    </fragment>
 </navigation>

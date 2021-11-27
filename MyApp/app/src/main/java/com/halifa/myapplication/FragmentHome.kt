@@ -40,6 +40,7 @@ class FragmentHome :  Fragment() {
             quantity.setBoldText(getString(R.string.quantity))
             vendu.setBoldText(getString(R.string.vendu))
 
+
             val nutritionFacts = NutritionFacts(NutritionFactsItem("kj",293,"?"),NutritionFactsItem("g", 0.8,"?"), NutritionFactsItem("g", 0.1, "?"), NutritionFactsItem("g", 8.4, "?"), NutritionFactsItem("g",5.2,"?"), NutritionFactsItem("g", 5.2, "?"),
                 NutritionFactsItem("g",4.2,"?"), NutritionFactsItem("g",0.75,"?"), NutritionFactsItem("g",0.295,"?"))
 
@@ -51,6 +52,7 @@ class FragmentHome :  Fragment() {
             //Picasso.get().load(product.url).into(placeholder)
 
         }
+
         @SuppressLint("SetTextI18n")
         fun bindProduct(product: Product) {
             nom.text = product.nom
